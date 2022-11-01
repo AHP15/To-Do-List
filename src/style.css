@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 8px black;
+  transition: 0.2s;
+}
+
+.container:hover {
+  margin: 90px auto;
+}
+
+.head-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid lightgray;
+}
+
+.refresh {
+  cursor: pointer;
+}
+
+.refresh img {
+  width: 20px;
+}
+
+form {
+  position: relative;
+  border-bottom: 1px solid lightgray;
+}
+
+form input {
+  flex: 1;
+  padding: 15px;
+  width: 100%;
+  font-size: 17px;
+  font-style: italic;
+  border: none;
+  outline: none;
+}
+
+.add-btn {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.add-btn img {
+  width: 20px;
+}
+
+.clear-btn {
+  padding: 15px;
+  font-size: 17px;
+  cursor: pointer;
+  border: none;
+}
+
+.item {
+  border-bottom: 1px solid lightgray;
+  position: relative;
+}
+
+.item input {
+  width: 100%;
+  padding: 15px;
+  padding-left: 50px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  transition: 0.2s;
+}
+
+.item input:focus {
+  background-color: rgba(255, 255, 0, 0.3);
+}
+
+.actions {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.actions img {
+  width: 20px;
+}
+
+.square {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 15px;
+  left: 15px;
+  border: 2px solid lightgray;
+}
