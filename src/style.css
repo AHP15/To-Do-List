@@ -111,4 +111,5 @@ form input {
   top: 15px;
   left: 15px;
   border: 2px solid lightgray;
+  cursor: pointer;
 }
