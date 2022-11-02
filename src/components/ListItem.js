@@ -21,6 +21,15 @@ const ListItem = (item) => {
   moreImage.src = More;
   const trashImage = document.createElement('img');
   trashImage.src = Trash;
+  trashImage.addEventListener('click', () => {
+    const removeTask = new CustomEvent('removetask', {
+      detail: {
+        index: item.index,
+      },
+    });
+    const tasksConatiner = document.querySelector('.list-container');
+    tasksConatiner.dispatchEvent(removeTask);
+  });
   actions.appendChild(moreImage);
 
   container.appendChild(checkbox);
@@ -29,7 +38,21 @@ const ListItem = (item) => {
   container.appendChild(actions);
 
   input.addEventListener('focusin', () => actions.replaceChild(trashImage, moreImage));
-  input.addEventListener('focusout', () => actions.replaceChild(moreImage, trashImage));
+  input.addEventListener('focusout', () => {
+    setTimeout(() => actions.replaceChild(moreImage, trashImage), 500);
+  });
+  input.addEventListener('input', () => {
+    const editTask = new CustomEvent('edittask', {
+      detail: {
+        info: {
+          newTask: { ...item, description: input.value },
+          index: item.index,
+        },
+      },
+    });
+    const tasksConatiner = document.querySelector('.list-container');
+    tasksConatiner.dispatchEvent(editTask);
+  });
 
   return container;
 };
