@@ -15,6 +15,7 @@
   flex-direction: column;
   box-shadow: 1px 1px 8px black;
   transition: 0.2s;
+  border-radius: 5px;
 }
 
 .container:hover {
@@ -93,6 +94,11 @@ form input {
   background-color: rgba(255, 255, 0, 0.3);
 }
 
+.item .input-completed {
+  text-decoration: line-through;
+  color: darkgray;
+}
+
 .actions {
   position: absolute;
   top: 15px;
@@ -112,4 +118,12 @@ form input {
   left: 15px;
   border: 2px solid lightgray;
   cursor: pointer;
+}
+
+.square_checked {
+  border: none;
+}
+
+.square_checked img {
+  width: 25px;
 }
