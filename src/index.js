@@ -3,6 +3,7 @@ import HeadLine from './components/HeadLine';
 import Form from './components/Form';
 import ListItem from './components/ListItem';
 import { addTask, removeTask, editTask } from './components/addRemove';
+import { completeTask, incompleteTask } from './components/completeTask';
 
 const container = document.querySelector('.container');
 container.insertBefore(HeadLine(), container.firstChild);
@@ -40,5 +41,19 @@ tasksConatiner.addEventListener('removetask', (e) => {
 tasksConatiner.addEventListener('edittask', (e) => {
   const { index, newTask } = e.detail.info;
   tasks = editTask(tasks, index, newTask);
+  setStorage();
+});
+
+tasksConatiner.addEventListener('itemcompleted', (e) => {
+  const { index } = e.detail;
+  tasks = completeTask(tasks, index);
+  renderItems();
+  setStorage();
+});
+
+tasksConatiner.addEventListener('itemincomplete', (e) => {
+  const { index } = e.detail;
+  tasks = incompleteTask(tasks, index);
+  renderItems();
   setStorage();
 });
