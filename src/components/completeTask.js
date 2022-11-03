@@ -20,4 +20,9 @@ const incompleteTask = (taskArr, index) => taskArr.map((task) => {
   return task;
 });
 
-export { completeTask, incompleteTask };
+const clearCompletedTasks = (taskArr) => {
+  const result = taskArr.filter((task) => !task.completed);
+  return result;
+};
+
+export { completeTask, incompleteTask, clearCompletedTasks };
