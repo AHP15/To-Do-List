@@ -1,6 +1,10 @@
 # To-Do-List
 
-This is the first part of this project which include the webpack setup and the list structure with the styling
+This is a To Do List app that have the functionality to add, remove, and mark as completed tasks
+
+## Live demo
+
+[demo here](https://abdessittir.github.io/To-Do-List/dist/)
 
 ## Buit with
 * HTML/CSS
