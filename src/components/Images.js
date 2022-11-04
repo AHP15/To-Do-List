@@ -10,7 +10,7 @@ const MoreImage = () => {
 const TrashImage = (item) => {
   const trashImage = document.createElement('img');
   trashImage.src = Trash;
-  trashImage.addEventListener('click', () => {
+  trashImage.addEventListener('mousedown', () => {
     const removeTask = new CustomEvent('removetask', {
       detail: {
         index: item.index,
