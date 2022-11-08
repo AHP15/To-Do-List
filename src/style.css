@@ -7,6 +7,11 @@
   font-family: 'Roboto', sans-serif;
 }
 
+body {
+  background-color: whitesmoke;
+  position: relative;
+}
+
 .container {
   width: 100%;
   max-width: 600px;
@@ -28,6 +33,7 @@
   align-items: center;
   padding: 15px;
   border-bottom: 1px solid lightgray;
+  background-color: white;
 }
 
 .refresh {
@@ -76,7 +82,13 @@ form input {
 
 .item {
   border-bottom: 1px solid lightgray;
+  background-color: white;
   position: relative;
+}
+
+.item-dragging {
+  border: 1px solid lightskyblue;
+  position: fixed;
 }
 
 .item input {

@@ -22,7 +22,7 @@ const incompleteTask = (taskArr, index) => taskArr.map((task) => {
 
 const clearCompletedTasks = (taskArr) => {
   const result = taskArr.filter((task) => !task.completed);
-  return result;
+  return result.map((task, i) => ({ ...task, index: i + 1 }));
 };
 
 export { completeTask, incompleteTask, clearCompletedTasks };

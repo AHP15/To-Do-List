@@ -13,6 +13,13 @@ const Actions = () => {
 const ListItem = (item) => {
   const container = document.createElement('div');
   container.classList.add('item');
+  container.setAttribute('draggable', 'true');
+  container.addEventListener('dragstart', () => {
+    container.classList.add('item-dragging');
+  });
+  container.addEventListener('dragend', () => {
+    container.classList.remove('item-dragging');
+  });
 
   const checkbox = document.createElement('input');
   checkbox.setAttribute('type', 'checkbox');
@@ -27,7 +34,9 @@ const ListItem = (item) => {
   container.appendChild(input);
   container.appendChild(actions);
 
-  return container;
+  const targetContainer = document.createElement('div');
+  targetContainer.appendChild(container);
+  return targetContainer;
 };
 
 export default ListItem;
