@@ -28,12 +28,4 @@ const removeTask = (tasksArr, taskIndex) => {
   return result;
 };
 
-const editTask = (tasksArr, index, newtask) => tasksArr.map((task) => {
-  if (task.index === index) {
-    return newtask;
-  }
-
-  return task;
-});
-
-export { addTask, removeTask, editTask };
+export { addTask, removeTask };

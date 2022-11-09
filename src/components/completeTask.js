@@ -25,4 +25,17 @@ const clearCompletedTasks = (taskArr) => {
   return result.map((task, i) => ({ ...task, index: i + 1 }));
 };
 
-export { completeTask, incompleteTask, clearCompletedTasks };
+const editTask = (tasksArr, index, newtask) => tasksArr.map((task) => {
+  if (task.index === index) {
+    return newtask;
+  }
+
+  return task;
+});
+
+export {
+  completeTask,
+  incompleteTask,
+  clearCompletedTasks,
+  editTask,
+};

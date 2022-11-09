@@ -2,8 +2,13 @@ import './style.css';
 import HeadLine from './components/HeadLine';
 import Form from './components/Form';
 import ListItem from './components/ListItem';
-import { addTask, removeTask, editTask } from './components/addRemove';
-import { completeTask, incompleteTask, clearCompletedTasks } from './components/completeTask';
+import { addTask, removeTask } from './components/addRemove';
+import {
+  completeTask,
+  incompleteTask,
+  clearCompletedTasks,
+  editTask,
+} from './components/completeTask';
 
 const container = document.querySelector('.container');
 container.insertBefore(HeadLine(), container.firstChild);
