@@ -1,4 +1,4 @@
-import { addTask, removeTask } from './src/components/addRemove';
+import { addTask, removeTask } from '../src/components/addRemove';
 
 // Test the addTask()
 describe('Test the addTask() function', () => {
@@ -17,7 +17,7 @@ describe('Test the addTask() function', () => {
     }]);
   });
 
-  test('Should set the index property accordinly', () => {
+  test('Should set the index property accordingly', () => {
     // Arrange
     const list = [
       { description: 'dummy text', index: 1, completed: false },
