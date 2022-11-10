@@ -1,4 +1,4 @@
-import { addTask, removeTask } from './src/components/addRemove';
+import { addTask, removeTask } from '../src/components/addRemove';
 
 // Test the addTask()
 describe('Test the addTask() function', () => {

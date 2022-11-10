@@ -3,7 +3,7 @@ import {
   incompleteTask,
   clearCompletedTasks,
   editTask,
-} from './src/components/completeTask';
+} from '../src/components/completeTask';
 
 describe('Test editTask() for editing the task description', () => {
   test('test for editing description', () => {
