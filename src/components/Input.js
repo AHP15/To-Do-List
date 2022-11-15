@@ -12,7 +12,7 @@ const Input = (item, actions) => {
     input.classList.remove('input-completed');
   });
   input.addEventListener('focusout', () => {
-    setTimeout(() => actions.replaceChildren(MoreImage()), 100);
+    setTimeout(() => actions.replaceChildren(MoreImage()), 500);
     if (item.completed) {
       input.classList.add('input-completed');
     }
